@@ -76,6 +76,6 @@ title = 'iSIEM Documentation'
 
 [[menu.primary]]
     name  = "Docs"
-    url = "/isiem/docs/"
+    url = "/docs/"
     identifier = "docs"
     weight = 10
