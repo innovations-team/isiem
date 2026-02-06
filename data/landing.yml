@@ -1,0 +1,92 @@
+# Note: Template blocks require a 'weight' parameter so they're correctly ordered on the landing page
+
+# Hero
+hero:
+  enable: true
+  weight: 10
+  template: hero
+
+  backgroundImage:
+    path: "images/templates/hero"
+    filename:
+      desktop: "gradient-desktop.webp"
+      mobile: "gradient-mobile.webp"
+
+  badge:
+    text: v0.1.0
+    color: primary # primary, secondary, success, danger, warning, info, light, dark
+    pill: false # boolean
+    soft: true # boolean
+
+  # titleLogo:
+  #   path: "images/logos"
+  #   filename: "title_logo.png"
+  #   alt: "Lotus Docs Logo"
+  #   height: 80px
+
+  title: "iSIEM"
+  subtitle: A unified SIEM platform for Small and Medium Enterprises.
+
+  image:
+    path: "images" # path to image under configured assets directory. default 'images'
+    filename: "isiemlogo.png" # filename of your hero image (including file extension)
+    alt: "iSIEM Logo Screenshot" # Optional but recommended
+    boxShadow: true # default 'false' (excludes .svg images)
+    rounded: true # round the image corners? default 'false' (excludes .svg images)
+
+  ctaButton:
+    icon: rocket_launch
+    btnText: "Get Started"
+    url: "/docs/"
+
+# Feature Grid
+featureGrid:
+  enable: true
+  weight: 20
+  template: feature grid
+
+  title: Why choose iSIEM?
+  subtitle: iSIEM is consolidated from Open SOurce solutions. It is cheap for an organization withouf the budget for proprietary SIEM solutions. Check out some core features below.
+
+  items:
+    - title: Log Aggregation
+      icon: speed
+      description: We offer a consolidation of all security telemetry for ease of analysis and monitoring.
+      ctaLink:
+        text: learn more
+        url: /docs/
+
+    - title: Threat Intelligence
+      icon: trending_up
+      description: We tap into the wide range of threat intelligence shared by othe rproffessional and communities witjhing the cybersecurity industry to help enrich your logs for better detection.
+      ctaLink:
+        text: learn more
+        url: /docs/
+
+    - title: Secure by default
+      icon: lock
+      description: Lotus Docs' default configuration scores A+ on Mozilla Observatory. You can update the default Security Headers to suit your requirements.
+      ctaLink:
+        text: learn more
+        url: /docs/
+
+    - title: SOAR
+      icon: settings
+      description: We help you automate workflows and security investigation easily through ochestration.
+      ctaLink:
+        text: learn more
+        url: /docs/
+
+    - title: Case Management
+      icon: change_history
+      description: We help you handle incidents faster and quicker with a smooth integrated and easy to use case management solution. 
+      ctaLink:
+        text: learn more
+        url: /docs/
+
+    - title: Reporting & Visualization
+      icon: dark_mode
+      description: Gains insights about your security posture at a glance and demonstate your commitment to security to regulators. We help you pass audits.
+      ctaLink:
+        text: learn more
+        url: /docs/

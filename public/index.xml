@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iSIEM Documentation</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on iSIEM Documentation</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Feb 2026 09:38:26 +0300</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Overview</title>
+      <link>//localhost:1313/docs/overview/</link>
+      <pubDate>Wed, 04 Feb 2026 09:38:26 +0300</pubDate>
+      <guid>//localhost:1313/docs/overview/</guid>
+      <description>&lt;h3 id=&#34;sumamry&#34;&gt;Sumamry &lt;a href=&#34;#sumamry&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This project implements an In-house SOC ecosystem that leverages Open-source solutions to achieve centralized security visibility, detection and response. It aims to improve security visibility, threat detection, compliance monitoring, and incident response across the organization’s infrastructure.&lt;/p&gt;&#xA;&lt;h3 id=&#34;background&#34;&gt;Background &lt;a href=&#34;#background&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4 id=&#34;project-origin&#34;&gt;Project Origin &lt;a href=&#34;#project-origin&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;The iSIEM project originated from a critical challege faced by Small and Medium sized Enterprises (SMEs): the need to maintain adequate cybersecurity controls while operating under limited budgets.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Indexer Installation</title>
+      <link>//localhost:1313/docs/guides/wazuh-installation/indexer/</link>
+      <pubDate>Wed, 04 Feb 2026 09:38:26 +0300</pubDate>
+      <guid>//localhost:1313/docs/guides/wazuh-installation/indexer/</guid>
+      <description>&lt;h3 id=&#34;certificate-creation&#34;&gt;Certificate creation &lt;a href=&#34;#certificate-creation&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Wazuh uses certificates to establish confidentiality and encrypt communications between its central components.&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;&#xA;  &lt;div class=&#34;prism-codeblock &#34;&gt;&#xA;  &lt;pre id=&#34;23ba1f5&#34; class=&#34;language-bash &#34;&gt;&#xA;  &lt;code&gt;&#xD;&#xA;curl -sO https://packages.wazuh.com/4.14/wazuh-certs-tool.sh&#xD;&#xA;curl -sO https://packages.wazuh.com/4.14/config.yml&lt;/code&gt;&#xA;  &lt;/pre&gt;&#xA;  &lt;/div&gt;&#xA;&lt;p&gt;Edit &lt;code&gt;./config.yml&lt;/code&gt; and replace the node names and IP values with the corresponding names and IP addresses.&lt;/p&gt;&#xA;&lt;p&gt;Be keen on spaces while editing the  ./config.yml&#xA;indexer IP: 192.168.104.200&lt;/p&gt;&#xA;&lt;p&gt;dashboard and manager IP: 192.168.104.199&lt;/p&gt;&#xA;&lt;p&gt;Run &lt;code&gt;./wazuh-certs-tool.sh&lt;/code&gt; to create the certificates.&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;&#xA;  &lt;div class=&#34;prism-codeblock &#34;&gt;&#xA;  &lt;pre id=&#34;60f8231&#34; class=&#34;language-bash &#34;&gt;&#xA;  &lt;code&gt; ./wazuh-certs-tool.sh -A&lt;/code&gt;&#xA;  &lt;/pre&gt;&#xA;  &lt;/div&gt;&#xA;&lt;p&gt;Compress all the necessary files.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Manager Installation</title>
+      <link>//localhost:1313/docs/guides/wazuh-installation/manager/</link>
+      <pubDate>Wed, 04 Feb 2026 09:38:26 +0300</pubDate>
+      <guid>//localhost:1313/docs/guides/wazuh-installation/manager/</guid>
+      <description>&lt;p&gt;We will be deploying the Wazuh server/manager and dashboard on the same server&lt;/p&gt;&#xA;&lt;p&gt;Import GPG key and Add Wazuh repository&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;&#xA;  &lt;div class=&#34;prism-codeblock &#34;&gt;&#xA;  &lt;pre id=&#34;5b4ea34&#34; class=&#34;language-bash &#34;&gt;&#xA;  &lt;code&gt;rpm --import https://packages.wazuh.com/key/GPG-KEY-WAZUH&#xD;&#xA;&#xD;&#xA;echo -e &amp;#39;[wazuh]\ngpgcheck=1\ngpgkey=https://packages.wazuh.com/key/GPG-KEY-WAZUH\nenabled=1\nname=EL-$releasever - Wazuh\nbaseurl=https://packages.wazuh.com/4.x/yum/\npriority=1&amp;#39; | tee /etc/yum.repos.d/wazuh.repo&lt;/code&gt;&#xA;  &lt;/pre&gt;&#xA;  &lt;/div&gt;&#xA;&lt;p&gt;Install Wazuh manager package&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;&#xA;  &lt;div class=&#34;prism-codeblock &#34;&gt;&#xA;  &lt;pre id=&#34;a64c41d&#34; class=&#34;language-bash &#34;&gt;&#xA;  &lt;code&gt;dnf -y install wazuh-manager&lt;/code&gt;&#xA;  &lt;/pre&gt;&#xA;  &lt;/div&gt;&#xA;&lt;p&gt;Install filebeat&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;&#xA;  &lt;div class=&#34;prism-codeblock &#34;&gt;&#xA;  &lt;pre id=&#34;bc0d044&#34; class=&#34;language-bash &#34;&gt;&#xA;  &lt;code&gt;dnf -y install filebeat&lt;/code&gt;&#xA;  &lt;/pre&gt;&#xA;  &lt;/div&gt;&#xA;&lt;p&gt;Download the preconfigured Filebeat configuration file and edit the /etc/filebeat/filebeat.yml , replace:&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;&#xA;  &lt;div class=&#34;prism-codeblock &#34;&gt;&#xA;  &lt;pre id=&#34;5864806&#34; class=&#34;language-bash &#34;&gt;&#xA;  &lt;code&gt;curl -so /etc/filebeat/filebeat.yml https://packages.wazuh.com/4.14/tpl/wazuh/filebeat/filebeat.yml&lt;/code&gt;&#xA;  &lt;/pre&gt;&#xA;  &lt;/div&gt;&#xA;&lt;p&gt;hosts - replace the IP address with you indexer IP&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Shuffle Installation</title>
+      <link>//localhost:1313/docs/guides/ir-installation/shuffle/</link>
+      <pubDate>Wed, 04 Feb 2026 09:38:26 +0300</pubDate>
+      <guid>//localhost:1313/docs/guides/ir-installation/shuffle/</guid>
+      <description>&lt;p&gt;Below is the installation procedure for the Shuffle&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TheHive Installation</title>
+      <link>//localhost:1313/docs/guides/ir-installation/thehive/</link>
+      <pubDate>Wed, 04 Feb 2026 09:38:26 +0300</pubDate>
+      <guid>//localhost:1313/docs/guides/ir-installation/thehive/</guid>
+      <description>&lt;p&gt;Below is the installation procedure for thehive&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MISP Installation</title>
+      <link>//localhost:1313/docs/guides/threat-intelligence-deployment/misp/</link>
+      <pubDate>Wed, 04 Feb 2026 09:38:26 +0300</pubDate>
+      <guid>//localhost:1313/docs/guides/threat-intelligence-deployment/misp/</guid>
+      <description>&lt;p&gt;Below is the installation procedure for MISP&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenCTI Installation</title>
+      <link>//localhost:1313/docs/guides/threat-intelligence-deployment/opencti/</link>
+      <pubDate>Wed, 04 Feb 2026 09:38:26 +0300</pubDate>
+      <guid>//localhost:1313/docs/guides/threat-intelligence-deployment/opencti/</guid>
+      <description>&lt;p&gt;Below is the installation procedure for MISP&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ollama Installation</title>
+      <link>//localhost:1313/docs/guides/ai-assistant-deployment/ollama/</link>
+      <pubDate>Wed, 04 Feb 2026 09:38:26 +0300</pubDate>
+      <guid>//localhost:1313/docs/guides/ai-assistant-deployment/ollama/</guid>
+      <description>&lt;p&gt;Below is the installation procedure for Ollama&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Log Aggregation, Correlation and Visualization</title>
+      <link>//localhost:1313/docs/features/log-aggregation/</link>
+      <pubDate>Wed, 04 Feb 2026 09:38:26 +0300</pubDate>
+      <guid>//localhost:1313/docs/features/log-aggregation/</guid>
+      <description>&lt;h3 id=&#34;log-aggregation&#34;&gt;Log Aggregation &lt;a href=&#34;#log-aggregation&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Log Aggregation enables centralized collection of logs from servers, endpoints, applications, and network devices into a single platform. This eliminates log silos and provides a unified security view.&lt;/p&gt;&#xA;&lt;h3 id=&#34;event-correlation&#34;&gt;Event Correlation &lt;a href=&#34;#event-correlation&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Correlation analyzes events across multiple sources to identify patterns that would be missed when logs are reviewed individually (e.g., repeated failed logins followed by a successful login from the same host). This significantly improves threat detection accuracy.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Threat Intelligence</title>
+      <link>//localhost:1313/docs/features/threat-intelligence/</link>
+      <pubDate>Wed, 04 Feb 2026 09:38:26 +0300</pubDate>
+      <guid>//localhost:1313/docs/features/threat-intelligence/</guid>
+      <description>&lt;h3 id=&#34;threat-intelligence-misp--opencti&#34;&gt;Threat Intelligence (MISP &amp;amp; OpenCTI) &lt;a href=&#34;#threat-intelligence-misp--opencti&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Threat Intelligence within the iSIEM platform provides context, awareness, and foresight to security operations. Rather than reacting to isolated alerts, threat intelligence enables the organization to understand who is attacking, how they operate, and why an event matters.&lt;/p&gt;&#xA;&lt;p&gt;For SMEs facing regulatory pressure but limited budgets, integrating open-source threat intelligence platforms allows access to enterprise-level intelligence capabilities without costly commercial subscriptions.&lt;/p&gt;&#xA;&lt;h4 id=&#34;purpose-of-threat-intelligence-in-isiem&#34;&gt;Purpose of Threat Intelligence in iSIEM &lt;a href=&#34;#purpose-of-threat-intelligence-in-isiem&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Threat intelligence enhances security operations by:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Case Management</title>
+      <link>//localhost:1313/docs/features/case-management/</link>
+      <pubDate>Wed, 04 Feb 2026 09:38:26 +0300</pubDate>
+      <guid>//localhost:1313/docs/features/case-management/</guid>
+      <description>&lt;h3 id=&#34;case-management-thehive&#34;&gt;Case Management (TheHive) &lt;a href=&#34;#case-management-thehive&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Case management is a critical component of the iSIEM platform that ensures security incidents are handled in a structured, consistent, and auditable manner. In iSIEM, case management is implemented using TheHive, an open-source incident response platform designed to support real-world security operations.&lt;/p&gt;&#xA;&lt;p&gt;For SMEs, case management bridges the gap between detection and response, turning security alerts into clearly tracked incidents with ownership, context, and resolution.&lt;/p&gt;&#xA;&lt;h4 id=&#34;purpose-of-case-management-in-isiem&#34;&gt;Purpose of Case Management in iSIEM &lt;a href=&#34;#purpose-of-case-management-in-isiem&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Without case management, security teams often rely on emails, chats, or spreadsheets to track incidents. This leads to:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SOAR</title>
+      <link>//localhost:1313/docs/features/soar/</link>
+      <pubDate>Wed, 04 Feb 2026 09:38:26 +0300</pubDate>
+      <guid>//localhost:1313/docs/features/soar/</guid>
+      <description>&lt;h3 id=&#34;security-orchestration-automation-and-response-soar--shuffle&#34;&gt;Security Orchestration, Automation, and Response (SOAR – Shuffle) &lt;a href=&#34;#security-orchestration-automation-and-response-soar--shuffle&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The SOAR component of the iSIEM platform is implemented using Shuffle, an open-source security orchestration and automation tool. SOAR plays a critical role in transforming security monitoring from a reactive, manual process into a coordinated, automated, and repeatable response capability.&lt;/p&gt;&#xA;&lt;p&gt;For SMEs, where security teams are small and resources are limited, SOAR enables faster and more consistent incident response without requiring a full-scale Security Operations Center (SOC).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI Assistant</title>
+      <link>//localhost:1313/docs/features/ai-assistant/</link>
+      <pubDate>Wed, 04 Feb 2026 09:38:26 +0300</pubDate>
+      <guid>//localhost:1313/docs/features/ai-assistant/</guid>
+      <description>&lt;h3 id=&#34;ai-assistant-ollama&#34;&gt;AI Assistant (Ollama) &lt;a href=&#34;#ai-assistant-ollama&#34; class=&#34;anchor&#34; aria-hidden=&#34;true&#34;&gt;&lt;i class=&#34;material-icons align-middle&#34;&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The AI Assistant component of the iSIEM platform is implemented using Ollama, a local, self-hosted AI framework. Its primary purpose is to enhance security analysis and decision-making by transforming complex security alerts and raw technical data into clear, human-readable insights.&lt;/p&gt;&#xA;&lt;p&gt;In SME environments, security teams are often small, time-constrained, and may lack deep specialization in every security domain. The AI Assistant addresses this gap by acting as an analytical support layer rather than a replacement for human analysts.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

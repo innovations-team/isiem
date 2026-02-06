@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Threat Intelligence Installation on iSIEM Documentation</title>
+    <link>//localhost:1313/docs/guides/threat-intelligence-deployment/</link>
+    <description>Recent content in Threat Intelligence Installation on iSIEM Documentation</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Feb 2026 09:38:26 +0300</lastBuildDate>
+    <atom:link href="//localhost:1313/docs/guides/threat-intelligence-deployment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MISP Installation</title>
+      <link>//localhost:1313/docs/guides/threat-intelligence-deployment/misp/</link>
+      <pubDate>Wed, 04 Feb 2026 09:38:26 +0300</pubDate>
+      <guid>//localhost:1313/docs/guides/threat-intelligence-deployment/misp/</guid>
+      <description>&lt;p&gt;Below is the installation procedure for MISP&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenCTI Installation</title>
+      <link>//localhost:1313/docs/guides/threat-intelligence-deployment/opencti/</link>
+      <pubDate>Wed, 04 Feb 2026 09:38:26 +0300</pubDate>
+      <guid>//localhost:1313/docs/guides/threat-intelligence-deployment/opencti/</guid>
+      <description>&lt;p&gt;Below is the installation procedure for MISP&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
