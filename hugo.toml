@@ -1,4 +1,4 @@
-baseURL = '/isiem/'
+baseURL = '/'
 languageCode = 'en-us'
 title = 'iSIEM Documentation'
 
@@ -76,6 +76,6 @@ title = 'iSIEM Documentation'
 
 [[menu.primary]]
     name  = "Docs"
-    url = "/docs/"
+    url = "/isiem/docs/"
     identifier = "docs"
     weight = 10
