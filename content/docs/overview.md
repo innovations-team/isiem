@@ -12,7 +12,7 @@ toc: true
 
 
 ### Summary
-![isiem](https://raw.githubusercontent.com/innovations-team/images/refs/heads/main/12.png.)  
+![isiem](https://raw.githubusercontent.com/innovations-team/images/refs/heads/main/12.png)  
 
 This project implements an In-house SOC ecosystem that leverages Open-source solutions to achieve centralized security visibility, detection and response. It aims to improve security visibility, threat detection, compliance monitoring, and incident response across the organization’s infrastructure.
 
