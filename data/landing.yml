@@ -63,13 +63,6 @@ featureGrid:
         text: learn more
         url: /docs/
 
-    - title: Secure by default
-      icon: lock
-      description: Lotus Docs' default configuration scores A+ on Mozilla Observatory. You can update the default Security Headers to suit your requirements.
-      ctaLink:
-        text: learn more
-        url: /docs/
-
     - title: SOAR
       icon: settings
       description: We help you automate workflows and security investigation easily through ochestration.
